@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     
-public function index() {
-    dd(123);
+public function index(Request $request) {
+    dd($request);
 }
+
+
 }
