@@ -15,8 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('telegram_id');
+            $table->unsignedBigInteger('balance')->default(0);
+            $table->unsignedBigInteger('earn')->default(0);
+            $table->string('level')->default(0);
             $table->string('role')->default('user');
-            $table->boolean('is_active');
+            $table->string('ref_code')->unique();
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_banned')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

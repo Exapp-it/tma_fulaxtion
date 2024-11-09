@@ -17,6 +17,8 @@ class MainController extends Controller
 
     public function about()
     {
-        return 'About';
+        return Inertia::render('Main/About', [
+            'title' => __('О нас'),
+        ]);
     }
 }
